@@ -9,6 +9,12 @@ namespace Store.Data
         public DbSet<Staff> Staff { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Inventory> Inventory { get; set; }
+        public DbSet<Department> Department { get; set; }
+
+        public DbSet<ProductCategory> ProductCategory { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

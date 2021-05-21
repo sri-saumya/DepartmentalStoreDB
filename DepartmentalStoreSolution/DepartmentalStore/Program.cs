@@ -23,13 +23,17 @@ namespace DepartmentalStore
             ////InsertData.AddOrder();
             //InsertData.AddProductHistory();
 
+            while (true)
+            {
 
-            Console.WriteLine("Select Query type(1,2,3) :\n \t 1)Query on product \n \t 2)Query on staff \n \t 3)Query on Supplier\n  ");
-            var userChoice = Console.ReadLine();
-            if (userChoice == "1") { Query.QueryOnProduct(); }
-            if (userChoice == "2") { Query.QueryOnStaff();   }
-            if (userChoice == "3") { Query.QueryOnSupplier(); }
+                Console.WriteLine("Select Query type(1,2,3) :1)Query on staff\n \t2)Query on product \n \t3)Query on Supplier");
+                var userChoice = Console.ReadLine();
+                if (userChoice == "2") { Query.QueryOnProduct(); }
+                if (userChoice == "1") { Query.QueryOnStaff(); }
+                if (userChoice == "3") { Query.QueryOnSupplier(); }
+                  
 
+            }
 
         }
 
