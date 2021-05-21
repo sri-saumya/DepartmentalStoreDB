@@ -22,12 +22,12 @@ namespace DepartmentalStore.OperationOnDatabase
 
             Console.WriteLine("Query3 c) : List of Products - Using stock ");
             var res2 = context.Product.Join(context.Inventory,
-                             e1 => e1.Id,
-                             e3 => e3.Id,
-                             (e1, e3) => 
+                             pro => pro.Id,
+                             inv => inv.Id,
+                             (pro, inv) => 
                              new{
-                                 prods = e1.ProductName,
-                                 q = e3.Quantity
+                                 prods = pro.ProductName,
+                                 q = inv.Quantity
                              });
 
             foreach (var val in res2)
@@ -52,11 +52,11 @@ namespace DepartmentalStore.OperationOnDatabase
         {
             Console.WriteLine("Query3 b) : List of Products - Using Category ");
             var res = context.Product.Join(context.Category,
-                             e1 => e1.Id,
-                             e3 => e3.Id,
-                             (e1, e3) => new {
-                                 prod = e1.ProductName,
-                                 cat = e3.CategoryName
+                             pro => pro.Id,
+                             cat => cat.Id,
+                             (pro, cat) => new {
+                                 prod = pro.ProductName,
+                                 cat = cat.CategoryName
                              });
             Console.WriteLine("Name" + "\t\t" + "Category \n");
             foreach (var i in res)
