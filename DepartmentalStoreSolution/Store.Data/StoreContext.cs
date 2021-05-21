@@ -6,6 +6,11 @@ namespace Store.Data
 {
     public class StoreContext:DbContext
     {
+        public DbSet<Staff> Staff { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<Product> Product { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("Server=localhost;Port=5432;DataBase=DepartmentalStoreEF;UserName=postgres;Password=1234");

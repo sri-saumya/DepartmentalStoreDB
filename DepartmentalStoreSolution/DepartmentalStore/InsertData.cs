@@ -9,6 +9,8 @@ namespace DepartmentalStore
     public static class InsertData
     {
         public static StoreContext context = new StoreContext();
+
+        //Insert Data on Tables
         public static void AddDepartment()
         {
             var data1 = new Department { DepartmentName = "AccountManagement", Description = "Manage account related operations" };
@@ -129,10 +131,10 @@ namespace DepartmentalStore
         public static void AddProductHistory()
         {
             var data1 = new ProductHistory { ProductId=1,Quantity=300,OrderDate= new DateTime(2000,02,10),SupplyDate=new DateTime(3032,02,01)};
-            var data2 = new ProductHistory { ProductId = 2, Quantity = 300, OrderDate = new DateTime(02,10,2000), SupplyDate = new DateTime(03,11,2001) };
-            var data3 = new ProductHistory { ProductId = 3, Quantity = 40, OrderDate = new DateTime(12,10,2200), SupplyDate = new DateTime(03,11,2300) };
-            var data4 = new ProductHistory { ProductId = 4, Quantity = 200, OrderDate = new DateTime(04,10,1992), SupplyDate = new DateTime(03,11,2005) };
-            var data5 = new ProductHistory { ProductId = 5, Quantity = 3000, OrderDate = new DateTime(30,11,1998), SupplyDate = new DateTime(03,11,2007) };
+            var data2 = new ProductHistory { ProductId = 2, Quantity = 300, OrderDate = new DateTime(2000, 02, 10), SupplyDate = new DateTime(2001,03, 11) };
+            var data3 = new ProductHistory { ProductId = 3, Quantity = 40, OrderDate = new DateTime(2200, 12, 10), SupplyDate = new DateTime(2300, 03, 11) };
+            var data4 = new ProductHistory { ProductId = 4, Quantity = 200, OrderDate = new DateTime(1992,04, 10), SupplyDate = new DateTime(2005,03, 11) };
+            var data5 = new ProductHistory { ProductId = 5, Quantity = 3000, OrderDate = new DateTime(1998,03, 11), SupplyDate = new DateTime(2007, 03, 11) };
 
             context.Add(data1); context.Add(data2); context.Add(data3); context.Add(data4); context.Add(data5);
             context.SaveChanges();
