@@ -26,16 +26,16 @@ namespace DepartmentalStore.OperationOnDatabase
         {
             Console.WriteLine("Query2 : Query on Staff - using Department");
             var res = context.Staff.Join(context.Department,
-                             e1 => e1.Id,
-                             e3 => e3.Id,
-                             (e1, e3) => new {
-                                 prod = e1.FirstName,
-                                 cat = e3.DepartmentName
+                             staff_id => staff_id.Id,
+                             dep_id => dep_id.Id,
+                             (staff_id, dep_id) => new {
+                                 name = staff_id.FirstName,
+                                 dep = dep_id.DepartmentName
                              });
             Console.WriteLine("Name" + "\t\t" + "DepartmentName \n");
             foreach (var i in res)
             {
-                Console.WriteLine($"{i.prod} \t\t {i.cat}");
+                Console.WriteLine($"{i.name} \t\t {i.dep}");
             }
         }
     }

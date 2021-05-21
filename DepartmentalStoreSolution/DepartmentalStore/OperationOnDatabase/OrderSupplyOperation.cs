@@ -13,13 +13,13 @@ namespace DepartmentalStore.OperationOnDatabase
         {
             Console.WriteLine("Query8");
             var res = context.Supplier.Join(context.Product,
-                             e1 => e1.Id,
-                             e3 => e3.Id,
-                             (e1, e3) => new {
-                                 supp = e1.FirstName,
-                                 supp2 = e1.LastName,
-                                 prod = e3.ProductName,
-                                 prod2 = e3.Manufacturer
+                             supp => supp.Id,
+                             pro => pro.Id,
+                             (supp, pro) => new {
+                                 supp = supp.FirstName,
+                                 supp2 = supp.LastName,
+                                 prod = pro.ProductName,
+                                 prod2 = pro.Manufacturer
                              });
             Console.WriteLine("FirstName" + "\t\t"+"LastName" + "\t\t" + "ProductName" + "\t\t" + "Manufacturer \n");
             foreach (var i in res)
