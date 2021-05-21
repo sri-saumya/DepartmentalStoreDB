@@ -26,7 +26,7 @@ namespace DepartmentalStore
             while (true)
             {
 
-                Console.WriteLine("Select Query type(1,2,3) :1)Query on staff\n \t2)Query on product \n \t3)Query on Supplier\n \t4)Query on Order and Supply");
+                Console.WriteLine("Select Query type(1,2,3) :\n \t1)Query on staff\n \t2)Query on product \n \t3)Query on Supplier\n \t4)Query on Order and Supply");
                 var userChoice = Console.ReadLine();
                 if (userChoice == "1") { UserInputForQuery.QueryOnStaff(); }
                 if (userChoice == "2") { UserInputForQuery.QueryOnProduct(); }

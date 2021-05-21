@@ -14,7 +14,7 @@ namespace DepartmentalStore
         
         public static void QueryOnStaff()
         {
-            Console.WriteLine("Select Query type(1,2) :1)StaffByDepartment\n \t2)StaffDetails");
+            Console.WriteLine("Select Query type(1,2) :\n \t1)StaffByDepartment\n \t2)StaffDetails");
             var userChoice = Console.ReadLine();
             
             if (userChoice == "1") { StaffOperation.StaffByDepartment(); }
@@ -24,7 +24,7 @@ namespace DepartmentalStore
         public static void QueryOnProduct()
         {
 
-            Console.WriteLine("Select Query type(1,2,3,4,5,6) : 1)ProductOutOfStock\n \t 2)ProductInStock\n \t 3)ProductWithinCategory\n \t4)ProductByName\n \t5)ProductByPrice\n \t6)ProductByName");
+            Console.WriteLine("Select Query type(1,2,3,4,5,6) : \n \t1)ProductOutOfStock\n \t 2)ProductInStock\n \t 3)ProductWithinCategory\n \t4)ProductByName\n \t5)ProductByPrice\n \t6)ProductByName");
             var userChoice = Console.ReadLine();
 
             if (userChoice == "1") { ProductOperation.ProductOutOfStock(); }
@@ -43,7 +43,7 @@ namespace DepartmentalStore
 
         public static void QueryOnOrder()
         {
-            Console.WriteLine("Select Query type(1,2,3) : 1)BySupplierName\n \t 2)SupplyAfterParticularDate\n \t 3)SupplyBeforeParticularDate");
+            Console.WriteLine("Select Query type(1,2,3) :\n \t 1)BySupplierName\n \t 2)SupplyAfterParticularDate\n \t 3)SupplyBeforeParticularDate");
             var userChoice = Console.ReadLine();
 
             if (userChoice == "1") {OrderSupplyOperation.BySupplierName(); }
