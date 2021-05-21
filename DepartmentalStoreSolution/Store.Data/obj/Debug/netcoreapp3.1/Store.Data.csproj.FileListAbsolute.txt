@@ -1,0 +1,15 @@
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Data.deps.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Data.runtimeconfig.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Data.runtimeconfig.dev.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Data.dll
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Data.pdb
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.csprojAssemblyReference.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.AssemblyInfoInputs.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.AssemblyInfo.cs
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.dll
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.pdb
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.genruntimeconfig.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Domain.dll
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\bin\Debug\netcoreapp3.1\Store.Domain.pdb
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\postgre\DepartmentalStoreSolution\Store.Data\obj\Debug\netcoreapp3.1\Store.Data.csproj.CopyComplete
