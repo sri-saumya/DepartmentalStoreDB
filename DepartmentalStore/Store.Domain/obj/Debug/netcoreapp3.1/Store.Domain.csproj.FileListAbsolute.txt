@@ -1,0 +1,12 @@
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\bin\Debug\netcoreapp3.1\Store.Domain.deps.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\bin\Debug\netcoreapp3.1\Store.Domain.runtimeconfig.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\bin\Debug\netcoreapp3.1\Store.Domain.runtimeconfig.dev.json
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\bin\Debug\netcoreapp3.1\Store.Domain.dll
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\bin\Debug\netcoreapp3.1\Store.Domain.pdb
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.AssemblyInfoInputs.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.AssemblyInfo.cs
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.dll
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.pdb
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.genruntimeconfig.cache
+C:\Users\lenovo\OneDrive - Taazaa Tech Pvt Ltd\Desktop\DepartmentalStore\Store.Domain\obj\Debug\netcoreapp3.1\Store.Domain.csprojAssemblyReference.cache
