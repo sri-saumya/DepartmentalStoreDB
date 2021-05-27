@@ -13,7 +13,9 @@ namespace Store.Data.Infrastructure
         public DbSet<Category> Category { get; set; }
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Department> Department { get; set; }
+        public DbSet<Address> Address { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
+      
 
         public StoreContext(DbContextOptions<StoreContext> options) : base(options)
         {

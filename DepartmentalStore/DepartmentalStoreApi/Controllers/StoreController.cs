@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Store.Data.Infrastructure;
+using Store.Domain.Model;
 using Store.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -15,60 +17,67 @@ namespace DepartmentalStoreApi.Controllers
     public class StoreController : ControllerBase
     {
         private readonly StoreContext _context;
+        private readonly IMapper _mapper;
 
-        public StoreController(StoreContext context)
+        public StoreController(StoreContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         //----------------------------product-----------------------------------------------------------------
 
-        [HttpGet("getproduct")]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProduct()
+        [HttpGet()]
+        public List<ProductModel> GetProduct()
         {
-            return await _context.Product.ToListAsync();
+            var result = _context.Product.ToList();
+            List<ProductModel> productModels = _mapper.Map<List<ProductModel>>(result);
+            return productModels;
         }
 
 
-        [HttpGet("getproductbyid/{id}")]
-        public async Task<ActionResult<Product>> GetProductById(long id)
+        [HttpGet("{categoryname}")]
+        public List<ProductModel> GetProductByCategory(string categoryname)
         {
-            var product = await _context.Product.FindAsync(id);
+            var res = (from p in _context.Product
+                       join pc in _context.ProductCategory
+                       on p.Id equals pc.ProductId
+                       join c in _context.Category
+                       on pc.CategoryId equals c.Id
+                       where categoryname == c.CategoryName
+                       select new ProductModel
+                       {
+                           CategoryName = c.CategoryName, ProductName = p.ProductName, ShortCode = p.ShortCode
+                       }).ToList();
+            return res;
+        }
 
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return product;
+        [HttpGet("{instock}")]
+        public List<ProductModel> GetInStockProduct(bool instock)
+        {
+            var res = (from p in _context.Product
+                       join i in _context.Inventory
+                       on p.Id equals i.ProductId
+                       where instock == i.InStock
+                       select new ProductModel
+                       {  
+                           ProductName = p.ProductName,ShortCode = p.ShortCode,
+                           Quantity = i.Quantity
+                       }).ToList();
+            return res;
         }
 
 
-        [HttpGet("getproductbycode/{code}")]
-        public async Task<ActionResult<Product>> GetProductByCode(string code)
+        [HttpPost()]
+        public Product createItem(Product item)
         {
-            var product = await _context.Product.FindAsync(code);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return product;
+            _context.Product.Add(item);
+            _context.SaveChanges();
+            return item;
         }
 
 
-        [HttpPost("addproduct")]
-        public async Task<ActionResult<Product>> AddProduct(Product product)
-        {
-            _context.Product.Add(product);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
-        }
-
-
-        [HttpPut("updateproduct/{id}")]
+        [HttpPut("{id}")]
         public Product UpdateProduct(Product item)
         {
             _context.Entry(item).State = EntityState.Modified;
@@ -76,63 +85,6 @@ namespace DepartmentalStoreApi.Controllers
             return item;
         }
 
-
-
-
-        //----------------------------staff-----------------------------------------------------------------
-
-        [HttpGet("getstaff")]
-        public async Task<ActionResult<IEnumerable<Staff>>> GetStaffDetails()
-        {
-            return await _context.Staff.ToListAsync();
-        }
-
-
-        [HttpGet("getstaffbyid/{id}")]
-        public async Task<ActionResult<Staff>> GetStaffById(long id)
-        {
-            var staff = await _context.Staff.FindAsync(id);
-
-            if (staff == null)
-            {
-                return NotFound();
-            }
-
-            return staff;
-        }
-
-
-        [HttpGet("getstaffbyrole/{depId}")]
-        public async Task<ActionResult<Staff>> GetStaffByRole(long dep)
-        {
-            var staff = await _context.Staff.FindAsync(dep);
-
-            if (staff == null)
-            {
-                return NotFound();
-            }
-
-            return staff;
-        }
-
-
-        [HttpPost("addstaff")]
-        public async Task<ActionResult<Staff>> AddStaff(Staff staff)
-        {
-            _context.Staff.Add(staff);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetStaff", new { id = staff.Id }, staff);
-        }
-
-
-        [HttpPut("updatestaff/{id}")]
-        public Staff UpdateStaff(Staff staff)
-        {
-            _context.Entry(staff).State = EntityState.Modified;
-            _context.SaveChanges();
-            return staff;
-        }
     }
 }
 

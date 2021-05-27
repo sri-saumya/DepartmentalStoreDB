@@ -11,6 +11,7 @@ using Store.Data.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace DepartmentalStoreApi
@@ -29,6 +30,7 @@ namespace DepartmentalStoreApi
         {
             services.AddControllers();
             services.AddDbContext<StoreContext>(opt => opt.UseNpgsql(Configuration["ConnectionStrings:dsconnectionstring"]));
+            services.AddAutoMapper(Assembly.GetAssembly(typeof (Store.Domain.StoreProfile)));
             services.AddCors();
         }
 
