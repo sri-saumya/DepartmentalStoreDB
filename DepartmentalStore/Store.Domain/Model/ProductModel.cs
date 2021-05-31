@@ -12,8 +12,13 @@ namespace Store.Domain.Model
         public decimal CostPrice { get; set; }
         public decimal SellingPrice { get; set; }
 
-        public string CategoryName { get; set; }
+        //public ProductModel()
+        //{
+        //    ProductCategories = new List<ProductCategoryModel>();
 
-        public long Quantity { get; set; }
+        //}
+        public List<ProductCategoryModel> ProductCategories { get; set; }
+
+        public InventoryModel Inventory { get; set; }
     }
 }

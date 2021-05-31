@@ -12,8 +12,14 @@ namespace Store.Domain
 
         public StoreProfile()
         {
-            this.CreateMap<Product, ProductModel>();
+            this.CreateMap<Product, ProductModel>().ReverseMap();
+            this.CreateMap<Category, CategoryModel>().ReverseMap();
+            this.CreateMap<Inventory, InventoryModel>().ReverseMap();
+            this.CreateMap<ProductCategory, ProductCategoryModel>().ReverseMap();
             this.CreateMap<Staff, StaffModel>();
+            this.CreateMap<Address, AddressModel>();
+            this.CreateMap<Department, DepartmentModel>();
+
 
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xNxz8VJ1eX1+wRG/0eLy0HFMI+5aMexE+4gn2e3F44QRqMi8KnxVVTKbXPNjTHO+meCfbqJN3AJ5n4p98suc6Q==",
+  "dgSpecHash": "2f/MIHjaxOa6FqIpmdZNaaozasVrm3cF6Ya7ZXVCBjEx5mIXKDhvn914CvKrXvPLA8cG8vniUQWAesISPmbzxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\OneDrive - Taazaa Tech Pvt Ltd\\Desktop\\DepartmentalStore\\DepartmentalStoreApi\\DepartmentalStoreApi.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\OneDrive - Taazaa Tech Pvt Ltd\\Desktop\\DP API\\API\\DepartmentalStore\\DepartmentalStoreApi\\DepartmentalStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

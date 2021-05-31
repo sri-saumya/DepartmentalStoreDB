@@ -30,41 +30,27 @@ namespace DepartmentalStoreApi.Controllers
         [HttpGet()]
         public List<ProductModel> GetProduct()
         {
-            var result = _context.Product.ToList();
-            List<ProductModel> productModels = _mapper.Map<List<ProductModel>>(result);
-            return productModels;
+            var result = _context.Product.Include(i => i.Inventory).ToList();
+            List<ProductModel> productModel = _mapper.Map<List<ProductModel>>(result);
+            return productModel;
         }
 
-
-        [HttpGet("{categoryname}")]
-        public List<ProductModel> GetProductByCategory(string categoryname)
-        {
-            var res = (from p in _context.Product
-                       join pc in _context.ProductCategory
-                       on p.Id equals pc.ProductId
-                       join c in _context.Category
-                       on pc.CategoryId equals c.Id
-                       where categoryname == c.CategoryName
-                       select new ProductModel
-                       {
-                           CategoryName = c.CategoryName, ProductName = p.ProductName, ShortCode = p.ShortCode
-                       }).ToList();
-            return res;
-        }
-
-        [HttpGet("{instock}")]
+        [HttpGet("product-stock")]
         public List<ProductModel> GetInStockProduct(bool instock)
         {
-            var res = (from p in _context.Product
-                       join i in _context.Inventory
-                       on p.Id equals i.ProductId
-                       where instock == i.InStock
-                       select new ProductModel
-                       {  
-                           ProductName = p.ProductName,ShortCode = p.ShortCode,
-                           Quantity = i.Quantity
-                       }).ToList();
-            return res;
+            var result = _context.Product.Include(i => i.Inventory).Where(s=>s.Inventory.InStock == instock).ToList();
+            List<ProductModel> productModel = _mapper.Map<List<ProductModel>>(result);
+            return productModel;
+        }
+
+
+        [HttpGet("product-category")]
+        public List<ProductCategoryModel> GetProductByCategory(string categoryname)
+        {
+            var pro = _context.ProductCategory.Include(c => c.Category).Include(p => p.Product)
+                      .Where(cn => cn.Category.CategoryName == categoryname);
+            var result = pro.ToList();
+            return _mapper.Map<List<ProductCategoryModel>>(result);
         }
 
 
